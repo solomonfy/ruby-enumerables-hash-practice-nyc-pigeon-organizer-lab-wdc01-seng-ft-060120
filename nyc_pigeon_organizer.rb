@@ -8,18 +8,20 @@ def nyc_pigeon_organizer(data)
   data.each do |color, color_collection|
     color_collection.each do |color_type, name_collection|
       name_collection.each do |name|
-    if !nyc_pigeon_sorted [name]
-  data.each do |gender, m_or_f|
-    
-    #binding.pry
-  
-  nyc_pigeon_sorted [name] = { }
-  
+        if !nyc_pigeon_sorted [name]
+            nyc_pigeon_sorted[name] = { }
+        end
+        
+        #nyc_pigeon_sorted[name][color] = []
+        
+        if !nyc_pigeon_sorted[name][color]
+          nyc_pigeon_sorted[name][color] = []
+        end
+          nyc_pigeon_sorted[name][color] << color_type.to_s
+        
+      
+      end
     end
-
-end
-end
-    
-end
-nyc_pigeon_sorted
+  end
+  nyc_pigeon_sorted
 end
