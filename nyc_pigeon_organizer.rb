@@ -1,4 +1,4 @@
-require "pry"
+
 
 def nyc_pigeon_organizer(data)
   # write your code here!
@@ -11,15 +11,11 @@ def nyc_pigeon_organizer(data)
         if !nyc_pigeon_sorted [name]
             nyc_pigeon_sorted[name] = { }
         end
-        
-        #nyc_pigeon_sorted[name][color] = []
-        
+
         if !nyc_pigeon_sorted[name][color]
           nyc_pigeon_sorted[name][color] = []
         end
           nyc_pigeon_sorted[name][color] << color_type.to_s
-        
-      
       end
     end
   end
